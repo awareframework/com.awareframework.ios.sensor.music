@@ -5,7 +5,7 @@
 This sensor module monitors the system music player using the MediaPlayer framework. It records playback state changes (playing, paused, stopped, etc.) and now-playing item changes (track changes), capturing metadata such as title, artist, album, genre, duration, and playback position.
 
 ## Requirements
-iOS 13 or later
+iOS 14 or later
 
 ## Installation
 

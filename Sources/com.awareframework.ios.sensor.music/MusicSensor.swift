@@ -232,6 +232,7 @@ public class MusicSensor: AwareSensor {
 
     private func buildMusicData(from player: MPMusicPlayerController) -> MusicData {
         var data = MusicData()
+        data.timestamp = Int64(Date().timeIntervalSince1970 * 1000)
         data.label = CONFIG.label
         data.playbackState = player.playbackState.rawValue
         data.playbackRate = Double(player.currentPlaybackRate)
