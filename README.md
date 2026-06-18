@@ -19,7 +19,7 @@ iOS 14 or later
 
 4. Add `NSAppleMusicUsageDescription` to your `Info.plist`.
 
-## Public functions
+## Public Functions
 
 ### MusicSensor
 
@@ -40,12 +40,12 @@ Class to hold the configuration of the sensor.
 + `duplicateEventSuppressionInterval: TimeInterval`: Minimum time interval (seconds) between identical events to suppress duplicates. (default = `1.0`)
 + `enabled: Bool`: Sensor is enabled or not. (default = `false`)
 + `debug: Bool`: Enable/disable logging. (default = `false`)
-+ `label: String`: Label for the data. (default = "")
-+ `deviceId: String`: Id of the device associated with the events. (default = "")
-+ `dbEncryptionKey`: Encryption key for the database. (default = `nil`)
-+ `dbType: Engine`: Which db engine to use for saving data. (default = `Engine.DatabaseType.NONE`)
-+ `dbPath: String`: Path of the database. (default = "aware_music")
-+ `dbHost: String`: Host for syncing the database. (default = `nil`)
++ `label: String`: Label for the data. (default = `""`)
++ `deviceId: String`: Id of the device associated with the events. (default = `""`)
++ `dbEncryptionKey: String?`: Encryption key for the database. (default = `nil`)
++ `dbType: DatabaseType`: Which db engine to use for saving data. (default = `.none`)
++ `dbPath: String`: Path of the database. (default = `"aware_music"`)
++ `dbHost: String?`: Host for syncing the database. (default = `nil`)
 
 ## Broadcasts
 
@@ -84,7 +84,7 @@ Contains the playback event data.
 | os            | String | Operating system of the device (iOS)                                                                |
 | jsonVersion   | Int    | JSON schema version                                                                                 |
 
-## Example usage
+## Example Usage
 
 ```swift
 import com_awareframework_ios_sensor_music
